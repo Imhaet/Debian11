@@ -1,4 +1,3 @@
-
 ## FIRST THING FIRST
 
 This installation list is based on my preferences while trying out Debian 11 (Bullseye) with KDE Plasma 5.20 on my - quite old - macbook and is not a definitive procedure. Feel free to use at your own peril.
@@ -11,11 +10,11 @@ This installation list is based on my preferences while trying out Debian 11 (Bu
 
 Intel Core2 Duo P7350 @ 2x 1.995Ghz | amd64 EFI | 4GB RAM | NVIDIA GeForce 9400M @ 256MB
 
-| Partition | File System | Mount     | Size              | Flags    |
-| ---       | ---         | ---       | ---               | ---      |
-| sda1      | fat32       | /boot/efi | 142MiB            | boot,esp |
-| sda3      | ext4        | /         | 141.28GiB         |          |
-| sda2      | linuxswap   |           | 7.63GiB (7812MiB) | swap     |
+| Partition | File System | Mount     | Size              | Flags |
+| ---       | ---         | ---       | ---               | ---   |
+| sda1      | fat32       | /boot/efi | 142MiB            | boot  |
+| sda3      | ext4        | /         | 141.28GiB         |       |
+| sda2      | linuxswap   |           | 7.63GiB (7812MiB) | swap  |
 
 UEFI Boot with GUID Partition Table
 
@@ -38,17 +37,17 @@ UEFI Boot with GUID Partition Table
 <br />
 
 - [x] **Install Broadcom Wireless**
-* Add a "contrib" and "non-free" components to your existing repository line in `/etc/apt/sources.list` using nano, vi or other editor. Below is an example of said file in Debian 10. 
+* Add a "contrib" and "non-free" components to your existing repository line in `/etc/apt/sources.list` using nano, vi or other editor. Below is an example of said file in Debian 11.
 ```
 # See https://wiki.debian.org/SourcesList for more information.
-deb http://deb.debian.org/debian buster main contrib non-free
-deb-src http://deb.debian.org/debian buster main contrib non-free
+deb http://deb.debian.org/debian bullseye main contrib non-free
+deb-src http://deb.debian.org/debian bullseye main contrib non-free
 
-deb http://deb.debian.org/debian buster-updates main contrib non-free
-deb-src http://deb.debian.org/debian buster-updates main contrib non-free
+deb http://deb.debian.org/debian bullseye-updates main contrib non-free
+deb-src http://deb.debian.org/debian bullseye-updates main contrib non-free
 
-deb http://security.debian.org/debian-security/ buster/updates main
-deb-src http://security.debian.org/debian-security/ buster/updates main
+deb http://security.debian.org/debian-security/ bullseye/updates main
+deb-src http://security.debian.org/debian-security/ bullseye/updates main
 ```
 * *Note:* Do not add a new line. Just add "contrib non-free" to the end of your existing line.
 * Update the list of available packages:
@@ -66,189 +65,8 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 
 <br />
 
-- [x] **Fixing WiFi Connection Problems After Reboot**
-* If after rebooting the wireless network device can scan, but will not complete connecting, we can try turning off MAC address randomization.
-* Edit `/etc/NetworkManager/NetworkManager.conf` by adding:
-```
-[device]
-wifi.scan-rand-mac-address=no
-```
-
-<br />
-
 - [x] **Enable Tapping and Reverse Scrolling (Natural) on Touchpad**
 * Create the config file `/etc/X11/xorg.conf.d/40-libinput.conf`. We'll enable **tapping** and **reverse scrolling** by adding the following lines to said file:
-```
-Section "InputClass"
-    Identifier "libinput touchpad catchall"
-    MatchIsTouchpad "on"
-    MatchDevicePath "/dev/input/event*"
-    Driver "libinput"
-    Option "Tapping" "on"
-    Option "NaturalScrolling" "true"
-EndSection
-```
-* Restart the DM:
-```
-:$ systemctl restart lightdm
-```
-
-More information can be found in [Debian Wiki](https://wiki.debian.org/SynapticsTouchpad#Enable_tapping_on_touchpad) synaptics touchpad webpage.
-
-<br />
-
-- [x] **Sound (For MacBook Aluminum - late 2008)** :speaker:
-```
-:# alsamixer
-```
-* Set all up Master, PCM, Line-Out and switch from 2ch to 6ch.
-* Search for the **Volume** plug in (PulseAudio Plugin) and add it to the *Panel*, and make sure the **Enable keyboard shortcuts for volume control** is `ON`.
-
-<br />
-
-- [x] **Enable System Sounds**
-* XFCE4 supports freedesktop system sounds, but it is not configured out of the box, therefore:
-```
-:# apt install libcanberra libcanberra-pulse gnome-session-camberra
-```
-* Add `canberra-gtk-module` to the environment variables:
-```
-:# nano /etc/environment
-```
-```
-# For the libcanberra-gtk-module to work
-export GTK_MODULES=canberra-gtk-module
-```
-* In *Settings Manager -> Appearance -> Settings* check **Enable event sounds**
-* In *Settings Manager -> Settings Editor -> xsettings/Net/SoundThemeName* from `default` to a sound theme located in `/usr/share/sounds/`
-* Make sure that **System Sounds** in the audio mixer is **turned on** and not **0**.
-
-This process is based on the information from [ArchLinux Wiki](https://wiki.archlinux.org/index.php/Xfce#Sound_themes) webpage and [this](https://forum.xfce.org/viewtopic.php?id=8618) forum thread.
-* *Note: The sound-theme-freedesktop that comes preinstalled provides a compatible sound theme, but it lacks many required events. A better choice is [sound-theme-smooth](https://aur.archlinux.org/packages/sound-theme-smooth/) (SoundThemeName should be "Smooth").*
-
-<br />
-
-- [X] **Bluetooth** :large_blue_diamond:
-
-**Important:** The following procedure is incomplete and untested.
-```
-:# apt install bluez blueman
-```
-* From here, it should instal a bluetooth manager to pair a blouetooth device...
-* LOL, it did not, so I ran`:$ hcidev` to prove it was installed, then `:$ hciscan` to find out the bluetooth device I wanted to pair and somehow it works now...
-:laughing:
-
-<br />
-
-- [x] **Dual Displays** :desktop_computer:
-
-*If you are not using dual displays, it may just be easier to stick with the open-source `nouveau` drivers.*
-
-While XFCE4 is the lightweight linux desktop environments, it is not the friendliest when using multiple displays. This comes from the fact that XFCE treats the display arrangement as one big workspace. So, to simplify things, XFCE prefers to arrenge the 2nd monitor to the right of the primary display, which may not be the configuration that you prefer (I have my Laptop usually on the right). Also, the out-of-the-box `nouveau` drivers limits the max resolution of the external monitor if connected through VGA, thus we may want to change the Graphic Card drivers to the propietary `NVIDIA` ones. Most of this process is based on the information from the [Nvidia Graphics Drivers Wiki](https://wiki.debian.org/NvidiaGraphicsDrivers).
-
-* The NVIDIA graphics processing unit (GPU) series/codename of an installed video card can usually be identified using the `lspci` command.
-```
-:$ lspci -nn | egrep -i "3D|Display|VGA"
-02:00.0 VGA COMPATIBLE CONTROLLER [0300]: NVIDIA Corporation C79 [GeForce 9400M] [10de:0863] (rev b1)
-```
-* Or to see which drivers are in use:
-```
-:$ lspci -k | grep -EA3 "3D|Display|VGA"
-02:00.0 VGA compatible controler: NVIDIA Corporation C79 [GeForce 9400M] (rev b1)
-        Subsystem: Apple Inc. MacBook5,1
-        Kernel driver in use: nouveau
-        Kernel modules: nouveau
-```
-* The `nvidia-detect` script can also be used to identify the GPU and the recommended driver package to install:
-```
-:# apt install nvidia-detect
-:$ nvidia-detect
-Detected NVIDIA GPUs:
-02:00.0 VGA compatible controller [0300]: NVIDIA Corporation C79 [GeForce 9400M] [10de:0863] (rev b1)
-
-Checking card:  NVIDIA Corporation C79 [GeForce 9400M] (rev b1)
-Your card is only supported upo to the 340 legacy drivers series.
-It is recommenmded to install the
-    nvidia-legacy-340xx-driver
-package.
-```
-* Before installing new drivers, you must obtain the proper kernel headers for the drivers to build with.
-```
-:# apt install linux-headers-amd64
-```
-* Update the list of available packages. Install the NVIDIA driver package:
-```
-:# apt install nvidia-legacy-340xx-driver
-```
-A warning message may appear while running the Package Configuration:
-```
-Conflicting nouveau kernel moduoe loaded
-The free nouveau kernel module is currently ooaded and conflicts with the non-free nvidia kernel module.
-The easisest way to fix this is to reboot the machine once the installation has finished.
-<Ok>
-```
-* DKMS will build the `nvidia` module for your system, via the `nvidia-legacy-340xx-kernel-dkms` package. After, create an Xorg server configuration file by installing the `nvidia-xconfig` package. Then run it with `sudo`, It will automatically generate a Xorg configuration file at `/etc/X11/xorg.conf`.
-
-For some reason, when running Debian (or some other Debian based distros like Ubuntu, ElementaryOS, etc.) with the `nvidia-340xx-driver`, this particular machine and old Macs with similar characteristics, experience an intermitent -and anoying- glitch/flickering at the bottom of the screen around 20px high, which is not present when using the open-source nouveau drivers (*Note:* It is quite curious that said glitch disapears when an external monitor is connected to the laptop).
-
-In any case, there is only one solution that I've found works reasonably well. It requires editing the `xorg.conf` file that was just generated. We'll add a new `viewportout=1278x798+1+0` line under the `Screen` section of the file. This forces the Nvidia driver to switch into a meta-mode of 1278x798 instead of the 1280x800 the screen actually has (it basically eliminates 2 lines of pixels from your screen somehow eliminating the glitch).
-
-* Edit the `/etc/X11/xorg.conf` file with `sudo`, add the "metamodes" option line and save. It should looke something like this:
-```
-Section "Screen"
-    Identifier     "Screen0"
-    Device         "Device0"
-    Monitor        "Monitor0"
-    DefaultDepth    24
-    Option "metamodes" "nvidia-auto-select +0+0 { viewportout=1278x798+1+0 }"
-    SubSection     "Display"
-        Depth       24
-    EndSubSection
-EndSection
-```
-* Reboot your system to enable the nouveau blacklist as well as the changes on the Xorg configuration file.
-```
-:$ systemctl reboot
-```
-* After the system reboots, connect the external monitor, open the `xfce4-display-settings` and configure your setup. (i.e., HP 23", Resolution - 1920x1080, 60.0Hz, Rotation - Left or None, position (0,0)). Make sure to set the `Laptop` display as the Primay display. *Note:* You may want to deselect the `Configure new displays when connected` option.
-
-**Important:** After some trial and error it appears that the best practice regarding switching between the laptop and the dual monitor is to connect all the cables before turning on the machine, this way all the settings are preserved. It is still possible to connect/disconnect the display, but you may need to reconfigure all your external monitor settings and position.
-
-<br />
-
-- [X] **External Monitor color correction with NVIDIA drivers**
-The external monitor that I am using for the Dual setting has some color problems. The NVIDIA X driver dows not preserve the values set with nvidia-settings between runs of the Xserver (or even between logging in and logging out of X). This is intentional, because different users may have different preferences, thus these settings are stored on a per user basis in a configuration file stored in the user's home directory.
-
-* Open `nvidia-settings`, go to *GPU 0 - (GeForce 9400M) -> DFP-2 (HP ZZ3i) -> Color Correction* and change the **Brighness** and **Gamma** for each individual Active Color Channel. The following values are the best that I have at the moment:
-```
-...
-[DPY:DP-1]/RedBrightness=   -0.300000
-[DPY:DP-1]/GreenBrightness= -0.200000
-[DPY:DP-1]/BlueBrightness=   0.200000
-[DPY:DP-1]/RedContrast=      0.000000
-[DPY:DP-1]/GreenContrast=    0.000000
-[DPY:DP-1]/BlueContrast=     0.000000
-[DPY:DP-1]/RedGamma=         1.300000
-[DPY:DP-1]/GreenGamma=       1.150000
-[DPY:DP-1]/BlueGamma=        0.800000
-...
-```
-* Quiting should create and record all this values on the `~/.nvidia-settings-rc` file. If it didn't, go into the `nvidia-settings` again, repeat the procedure and then go to to *nvidia-settings Configuration* and press the **Save Current Configuration** button.
-
-* From now on, every time you turn on the computer with the dual monitor connected, you can run `nvidia-settings --load-config-only` or just `nvidia-settings -l` and the color correction settings for the external monitor should apply. You could create a script to run this command at the start of the computer.
-
-<br />
-
-- [x] **Screen Brightness with NVIDIA drivers**
-
-**Important:** The following procedure is incomplete and untested.
-* After installing the NVIDIA drivers, you won't be able to change the screen brightness. To fix this we need to edit the Xorg configuration file `/etc/X11/xorg.conf` again by adding the following line under the `Screen` section:
-
-`Option         "RegistryDwords" "EnableBrightnessControl=1;"`
-
-* Reboot again for the changes to take effect.
-
----
 
 <br />
 
@@ -278,7 +96,7 @@ The external monitor that I am using for the Dual setting has some color problem
 :# apt install gparted
 ```
 
-- [x] **GIT**
+- [x] ~~**GIT**~~ *Already installed*
 ```
 :# apt install git
 ```
@@ -288,7 +106,7 @@ The external monitor that I am using for the Dual setting has some color problem
 :# apt install vlc
 ```
 
-- [x] ~~**Firefox**~~
+- [x] ~~**Firefox**~~ *Already installed*
 ```
 :# apt install firefox
 ```
