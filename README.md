@@ -63,10 +63,7 @@ For devices with a BCM4306 revision 3, BCM4311, BCM4318, BCM4321 or BCM4322 chip
 
 More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) apple wifi webpage.
 
-<br />
-
-- [x] **Enable Tapping and Reverse Scrolling (Natural) on Touchpad**
-* Create the config file `/etc/X11/xorg.conf.d/40-libinput.conf`. We'll enable **tapping** and **reverse scrolling** by adding the following lines to said file:
+---
 
 <br />
 
@@ -96,7 +93,8 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 :# apt install gparted
 ```
 
-- [x] ~~**GIT**~~ *Already installed*
+- [x] ~~**GIT**~~
+* *Already installed*
 ```
 :# apt install git
 ```
@@ -106,7 +104,8 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 :# apt install vlc
 ```
 
-- [x] ~~**Firefox**~~ *Already installed*
+- [x] ~~**Firefox**~~
+* *Already installed*
 ```
 :# apt install firefox
 ```
@@ -118,60 +117,11 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 :# apt install latexmk
 ```
 
-- [x] **Skype for Linux**
-```
-:$ wget https://go.skype.com/skypeforlinux-64.deb
-:# apt install ./skypeforlinux-64.deb
-```
-* Sometimes when trying to update with 'apt update' like:
-```
-W: Errore GPG: https://repo.skype.com/deb stable InRelease: Le seguenti firme non sono state verificate perché la chiave pubblica non è disponibile: NO_PUBKEY 1F3045A5DF7587C3
-E: The repository 'https://repo.skype.com/deb stable InRelease' is not signed.
-N: 
-```
-The problem is that after installing skype using its deb installer, it will add skype's repositories into your sources file, after adding a repository to your sources, you should add its public key too, however it seems that Skype did not add its public key to your system so you should add it manually:
-```
-wget -O - https://repo.skype.com/data/SKYPE-GPG-KEY | sudo apt-key add - 
-```
-
 ---
 
 <br />
 
 ## COSMETICS
-
-<br />
-
-- [x] **Install Themes and Icons**
-* Open *Synaptic Package Manager* and search for **-theme**, **-icon** and **greeter**
-* Select and install:
-```
-arc-theme
-papirus-icon-theme
-lightdm-gtk-greeter-settings
-```
-* Open the *Settings Manager*
-* In *Appearance -> Style* select the to **Arc-Dark**
-* In *Appearance -> Icons* select the to **Papirus-Dark**
-* In *Window Manager -> Style* select the to **Arc-Dark**
-* Also change the **Style, Icons, etc.** in the *LightDM GTL+ Greeter settings*
-* Finally, consider adding the **Whisker Menu** on the *Panel Preferences -> Items*
-
-<br />
-
-- [x] **Advanced Themes and Icons**
-* Most themes and icons can be downloaded from [Xfce-look.org](https://Xfce-look.org); Flat-Remix is a good choice.
-* The basic details of the procedure are:
-1. Download the archive.
-2. Extract it with the right click of your mouse.
-3. Create the **.icons** and **.themes** folders in your home directory. The fastest way to do that is by running in the terminal: `:$ mkdir ~/.icons ~/.themes`.
-4. Move the extracted theme folders to the ~/.theme folder and the extracted icons to the ~/.icons folder. You can make the .theme and .icons folders visible by pressing Ctrl+H or in the menu of your file manager *View -> Show Hidden Files*.
-* More detailed information about Themes and Icons can be found [here](https://averagelinuxuser.com/xfce-look-modern-and-beautiful/).
-
-* If some of the icon themes show a Xfce icons gtk-update-icon-cache warning, run the following command in the terminal:
-```
-:$ gtk-update-icon-cache ~/.icons/yourIconsTheme
-```
 
 <br />
 
@@ -321,11 +271,27 @@ MimeType=text/plain
 <br />
 <br />
 
-## PERSONAL DE SETTINGS IN XFCE
+## PERSONAL DE SETTINGS IN KDE
 
-Following are my personal settings for the DE in XFCE.
+Following are my personal settings for the DE in KDE.
 
 <br />
+
+- [X] **Appearance**
+* *Global Theme* -> Select **Breeze Dark** for the Theme
+* *Plasma Style* -> Select **Breeze Dark** for the Style
+* *Icons* -> Select **Breeze Dark** for the Icons
+* *Cursors* -> Select **Breeze** for the Cursors
+
+- [X] **Workspace**
+* *Workspace Behavior | General Behaviour* -> Click behavior: Select **Double-click to open files and folders**
+* *Workspace Behavior | Screen Locking* -> Click behavior: Select **Double-click to open files and folders**
+
+
+- [x] **Hardware > Input Devices > Touchpad**
+* *Tapping:* -> **Check** Tap-to-click
+* *Scrolling:* -> **Check** Invert scroll direction (Natural scrolling)
+
 
 - [x] **Appearance**
 * *Style* -> **Flat-Remix-GTK-Blue-Dark**
