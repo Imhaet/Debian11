@@ -1,6 +1,6 @@
 ## FIRST THING FIRST
 
-This installation list is based on my preferences while trying out Debian 11 (Bullseye) with KDE Plasma 5.20 on my - quite old - macbook and is not a definitive procedure. Feel free to use at your own peril.
+This installation list is based on my preferences while trying out Debian 11 (Bullseye) :dart: with KDE Plasma 5.20 on my - quite old - macbook and is not a definitive procedure. Feel free to use at your own peril.
 
 <br />
 
@@ -93,8 +93,7 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 :# apt install gparted
 ```
 
-- [x] ~~**GIT**~~
-* *Already installed*
+- [x] ~~**GIT**~~ *Already installed*
 ```
 :# apt install git
 ```
@@ -104,8 +103,7 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 :# apt install vlc
 ```
 
-- [x] ~~**Firefox**~~
-* *Already installed*
+- [x] ~~**Firefox**~~ *Already installed*
 ```
 :# apt install firefox
 ```
@@ -304,8 +302,6 @@ Following are my personal settings for the DE in KDE.
 
 ### Konsole Terminal Preferences
 
-Open `Konsole` and go to *Settings -> Configure Konsole...*
-
 - [x] **General**
 * *Process and window:* -> **Uncheck** Show menubar
 * *Process and window:* -> **Check** Remove window titlebar and frame
@@ -318,54 +314,25 @@ On a new Profile...
 * *Appearance | Edit...* -> Set **Background transparency:** to **30%**
 * Select the New profile **Set as Default**
 
+<br />
 
-
-
-- [x] **XFCE Terminal Preferences**
-* *Drop-down* -> Set Height to **70 %**
-* *Appearance* -> Set **Transparent background** to **0.70** Opacity
-* *Appearance* -> **Uncheck** Display menubar in new windows
-* *Appearance* -> Set **Default geometry:** to **120** columns **40** rows
-
-
+### Panel Preferences
 
 - [x] **Panel**
-* **Detailed List View** the 2nd Panel
-* *Items* -> The Items list is as follows:
-  * **Whisker Menu**
-    * *Appearance* -> **Uncheck** Show application descriptions
-    * *Appearance* -> **Check** Show menu hierarchy
-    * *Behavior* -> **Check** Position search entry next to panel button
-    * *Behavior* -> **Check** Position categories next to panel button
-    * *Commands* -> Run the `xfce4-taskmanager` command for the Edit Profile
-  * **Separator** -> Transparent
-  * **Separator** -> Separator
+* *Panel height:* -> Set to **30**
+  * **Application Launcher**
+  * **Trash**
   * **Show Desktop**
-  * **Launcher** -> File Manager
+  * **Pager**
+  * **Launcher** -> Dolphin File Manager
   * **Launcher** -> Firefox ESR
-  * **Trash Applet**
-  * **Window Buttons**
-    * *Filtering* -> **Check** Show only minimized windows
-  * **Separator** -> Transparent; Expand
-  * **Separator** -> Separator
-  * **Power Manager Plugin** -> Show Percentage
-  * **Battery Monitor** -> **Check** only Display power
-  * **PulseAudio Plugin**
-  * **Notification Area**
-    * *Appearance* -> Maximum icon size (px): **22**
-    * *Appearance* -> **Uncheck** Show frame
-  * **Clock**
-* *Display* -> Output: **Primary**
-* *Display* -> Make the Row Size (pixels): to **28**
-* *Appearance* -> Set Alpha: to **0**
-* **Move** Panel 1 to the bottom
-
-- [x] **User Icon in Whisker Menu**
-* I don't like the red silouwete icon for the user on Flat-Remix, so I will change it to the Debian logo.
-```
-mv ~/.icons/flat-Remix-Blue-Dark/apps/scalable/system-users.svg ~/.icons/flat-Remix-Blue-Dark/apps/scalable/system-users.svg.OLD
-mv ~/.debian_setup/UserIcons/debian.svg ~/.icons/flat-Remix-Blue-Dark/apps/scalable/system-users.svg
-```
+  * *SPACE*
+  * **System Tray**
+    * *Entries* -> set `IBus Panel` Visibility  to **Always hidden**
+    * *Entries* -> set `Battery and Brightness` Visibility to **Shown when relevant**
+  * **Digital Clock**
+    * *Appearance* -> **Uncheck** ` Show date
+    * *Appearance* -> set `Time display:` to **24-Hour**
 
 <br />
 :octocat:
