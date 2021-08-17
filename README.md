@@ -125,34 +125,20 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 
 <br />
 
-- [x] **Configure Greeter**
-* Create user configuration file for **lightDM**, the greeter that asks for user and credentials, and edit it:
+- [x] **Kvantum Theme Engine**
+* Some KVE themes have been developed with a Qt engine called [Kvantum](https://github.com/tsujan/Kvantum), and can be direclty installed on Debian-based distributions with:
 ```
-:# nano /usr/share/lightdm/lightdm.conf.d/01_my.conf
+:# add-apt-repository ppa:papirus/papirus
+:# apt update
+:# apt install qt5-style-kvantum qt5-style-kvantum-themes
 ```
-* Add the following lines to the file and save :floppy_disk: :
-```
-[SeatDefaults]
-greeter-hide-users=false
-```
-* After rebooting, the user name will be prompted.
+* Since the PPA splits the package into qt5-style-kvantum and qt5-style-kvantum-themes, both of them should be installed.
+* Now we need to go to *System Settings -> Application Style* and select **kvantum-dark** to activate it in Plasma.
 
 <br />
 
-### KEYBOARD SHORTCUTS
-
-<br />
-
-Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
-
-- [x] **Terminal**
-* `xfce4-terminal` runs with *Ctrl+Alt+T*
-
-- [x] **Dropdown Terminal**
-* `xfce4-terminal --drop-down` runs with *Super+T*
-
-- [x] **Kill Frozen Applications**
-* `xkill` runs with *Ctrl+Alt+Esc*
+- [x] **Keyboard Shortcuts**
+* Most used shortcuts come already pre-defined in KDE. For more go to *System Settings -> Workspace -> Shortcuts*.
 
 ---
 
@@ -271,7 +257,7 @@ MimeType=text/plain
 <br />
 <br />
 
-## PERSONAL DE SETTINGS IN KDE
+## PERSONAL SYSTEM SETTINGS IN KDE
 
 Following are my personal settings for the DE in KDE.
 
@@ -280,44 +266,60 @@ Following are my personal settings for the DE in KDE.
 - [X] **Appearance**
 * *Global Theme* -> Select **Breeze Dark** for the Theme
 * *Plasma Style* -> Select **Breeze Dark** for the Style
+* *Application Style* -> Select **Breeze**
 * *Icons* -> Select **Breeze Dark** for the Icons
 * *Cursors* -> Select **Breeze** for the Cursors
 
 - [X] **Workspace**
-* *Workspace Behavior | General Behaviour* -> Click behavior: Select **Double-click to open files and folders**
-* *Workspace Behavior | Screen Locking* -> Click behavior: Select **Double-click to open files and folders**
+* **Workspace Behavior**
+  * *General Behaviour* -> Click behavior: Select **Double-click to open files and folders**
+  * *Screen Locking* -> Click Appearance: **Configure...** and select **Homeworld**
+  * *Virtual Desktops* -> Add 2 Rows, **TOP** and **BOTTOM**
+  * *Activities | Activities* -> Add new activity called **Work**
+  * *Activities | Switching* -> `Walk through activities` set the **Global Alternate** shortcut to **Meta+Ctrl+Right**
+  * *Activities | Switching* -> `Walk through activities (Reverse)` set the **Global Alternate** shortcut to **Meta+Ctrl+Left**
+* **Shortcuts**
+  * *Shortcuts | KWin* -> `Quick Tile Window to the Bottom` **Uncheck** Default shortcut
+  * *Shortcuts | KWin* -> `Quick Tile Window to the Top` **Uncheck** Default shortcut
+  * *Shortcuts | KWin* -> `Maximize Window` **Uncheck** Default shortcut and add **Meta+Up**
+  * *Shortcuts | KWin* -> `Minimize Window` **Uncheck** Default shortcut and add **Meta+Down**
+  * *Shortcuts | KWin* -> `Switch One Desktop Down` **Check** Default shortcut **Meta+Ctrl+Down**
+  * *Shortcuts | KWin* -> `Switch One Desktop Up` **Check** Default shortcut **Meta+Ctrl+Up**
+* **Startup and Shutdown**
+  * *Login Screen (SDDM)* -> *We will be selecting a new theme*
+  * *Splash Screen* -> Install and select **QuarksSplashDark**
+
+- [X] **Hardware**
+* **Input Devices**
+  * *Touchpad | Tapping:* -> **Check** Tap-to-click
+  * *Touchpad | Scrolling:* -> **Check** Invert scroll direction (Natural scrolling)
+* **Power Management**
+  * *Energy Saving | On AC Power* -> `Dim screen` after **10 min**
+  * *Energy Saving | On AC Power* -> `Screen Energy Saving` After **30 min**
+  * *Energy Saving | On Battery* -> `Dim screen` after **2 min**
+  * *Energy Saving | On Battery* -> `Screen Energy Saving` Switch off after **30 min**
+  * *Energy Saving | On Battery* -> `Suspend session` Automatically **Sleep** after **10 min**
+
+<br />
+
+### Konsole Terminal Preferences
+
+Open `Konsole` and go to *Settings -> Configure Konsole...*
+
+- [x] **General**
+* *Process and window:* -> **Uncheck** Show menubar
+* *Process and window:* -> **Check** Remove window titlebar and frame
+
+- [x] **Profiles**
+On a new Profile...
+* *General* -> Give this profile a **New Name**
+* *General* -> Set the **Initial terminal size:** to **120 columns** and **40 rows**
+* *Appearance* -> Select **Linux Colors**
+* *Appearance | Edit...* -> Set **Background transparency:** to **30%**
+* Select the New profile **Set as Default**
 
 
-- [x] **Hardware > Input Devices > Touchpad**
-* *Tapping:* -> **Check** Tap-to-click
-* *Scrolling:* -> **Check** Invert scroll direction (Natural scrolling)
 
-
-- [x] **Appearance**
-* *Style* -> **Flat-Remix-GTK-Blue-Dark**
-* *Icons* -> **Flat-Remix-Blue-Dark**
-
-- [x] **Window Manager**
-* *Style* -> **Flat-Remix-GTK-Blue-Dark**
-* *Style | Button layout* -> Remove the **Minimize** button
-* *Keyboard* -> `Tile window to the top` runs with **Super+Up**
-* *Keyboard* -> `Tile window to the bottom` runs with **Super+Down**
-* *Keyboard* -> `Tile window to the left` runs with **Super+Left**
-* *Keyboard* -> `Tile window to the right` runs with **Super+Right**
-
-- [X] **Window Manager Tweaks**
-* *Compositor* -> Set **Opacity of windows during move:** to **~3/4** Opaque
-
-- [x] **LightDM GTK+ Greeter settings**
-* *Appearance* -> Select **Arc-Dark** for the Theme
-* *Appearance* -> Select **Papirus-Dark** for the Icons
-* *Appearance* -> Change the Default user image
-
-- [x] **File Manager Preferences**
-* *Display* -> View new folders using: **Detailed List View**
-
-- [x] **Workspaces**
-* *General* -> Number of wokspaces: **3**
 
 - [x] **XFCE Terminal Preferences**
 * *Drop-down* -> Set Height to **70 %**
@@ -325,20 +327,7 @@ Following are my personal settings for the DE in KDE.
 * *Appearance* -> **Uncheck** Display menubar in new windows
 * *Appearance* -> Set **Default geometry:** to **120** columns **40** rows
 
-- [x] **Desktop**
-* *Background* -> **Uncheck** Apply to all workspaces
-* *Background* -> Change the Folder: **path**
-* *Icons* -> **Uncheck** Home on the Default Icons
-* *Icons* -> **Uncheck** Filesystem on the Default Icons
-* *Icons* -> **Uncheck** Trash on the Default Icons
 
-- [X] **Power Manager**
-* *Display | Blank after* -> **5 minutes** On battery
-* *Display | Blank after* -> **30 minutes** Plugged in
-* *Display | Put to sleep after* -> **10 minutes** On battery
-* *Display | Put to sleep after* -> **45 minutes** Plugged in
-* *Display | Switch off after* -> **20 minutes** On battery
-* *Display | Switch off after* -> **Never** Plugged in
 
 - [x] **Panel**
 * **Detailed List View** the 2nd Panel
