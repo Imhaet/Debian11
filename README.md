@@ -121,6 +121,8 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 
 ## COSMETICS
 
+*Note:* I liked the look of the `Sweet KDE` theme from lkjkjl so, that is the one I am installing here, but you can follow the same procedure for any other Kvantum powered theme for KDE.
+
 <br />
 
 - [x] **Kvantum Theme Engine**
@@ -130,7 +132,15 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 :# apt update
 :# apt install qt5-style-kvantum qt5-style-kvantum-themes
 ```
-* Now we need to go to *System Settings -> Application Style* and select **kvantum-dark** to activate it in Plasma.
+* Now we need to go to *System Settings -> Application Style* and select **kvantum** to activate it in Plasma.
+* Open **Kvantum Manager** to select an install the unpacked Kvantum **Sweet-transparent** Kvantum theme and **Select** it.
+* Open **System Settings** and:
+  * Install **Sweet KDE** Global Theme.
+  * Install **Sweet KDE** Plasma Style.
+  * Install **Sweet Aurorae** Window Decorations.
+  * Install **Sweet cursors** if the Cursors hasn't been installed.
+* Download **Sweet-Rainbow** and **Sweet-Purple** folder icons from the [KDE Store](https://store.kde.org/), unpack them and move them to `~/.local/share/icons`
+* Now just have to apply all the settings and don't forget to **Log Out** and back in to see all changes!
 
 <br />
 
@@ -261,16 +271,17 @@ Following are my personal settings for the DE in KDE.
 <br />
 
 - [X] **Appearance**
-* *Global Theme* -> Select **Breeze Dark** for the Theme
-* *Plasma Style* -> Select **Breeze Dark** for the Style
-* *Application Style* -> Select **Breeze**
-* *Icons* -> Select **Breeze Dark** for the Icons
-* *Cursors* -> Select **Breeze** for the Cursors
+* *Global Theme* -> Select **Sweet** for the Theme
+* *Plasma Style* -> Select **Sweet** for the Style
+* *Application Style* -> Select **Kvantum**
+* *Colors* -> Select **Sweet** for the Colors
+* *Icons* -> Select **Sweet-Purple** for the Icons
+* *Cursors* -> Select **Sweet-cursors** for the Cursors
 
 - [X] **Workspace**
 * **Workspace Behavior**
   * *General Behaviour* -> Click behavior: Select **Double-click to open files and folders**
-  * *Screen Locking* -> Click Appearance: **Configure...** and select **Homeworld**
+  * *Screen Locking* -> Click Appearance: **Configure...** to select your Wallpaper
   * *Virtual Desktops* -> Add 2 Rows, **TOP** and **BOTTOM**
   * *Activities | Activities* -> Add new activity called **Work**
   * *Activities | Switching* -> `Walk through activities` set the **Global Alternate** shortcut to **Meta+Ctrl+Right**
@@ -285,7 +296,7 @@ Following are my personal settings for the DE in KDE.
   * *Shortcuts | Plasma* -> `Activate Application Dashboard Widget` Add custom shortcut **Meta+Space**
 * **Startup and Shutdown**
   * *Login Screen (SDDM)* -> *We will be selecting a new theme*
-  * *Splash Screen* -> Install and select **Yaplass - Debian** because of course
+  * *Splash Screen* -> Install and select **Sweet**
 
 - [X] **Personalization**
 * **Applications**
@@ -302,7 +313,7 @@ Following are my personal settings for the DE in KDE.
   * *Energy Saving | On AC Power* -> `Dim screen` after **10 min**
   * *Energy Saving | On AC Power* -> `Screen Energy Saving` After **30 min**
   * *Energy Saving | On Battery* -> `Dim screen` after **2 min**
-  * *Energy Saving | On Battery* -> `Screen Energy Saving` Switch off after **30 min**
+  * *Energy Saving | On Battery* -> `Screen Energy Saving` Switch off after **5 min**
   * *Energy Saving | On Battery* -> `Suspend session` Automatically **Sleep** after **10 min**
 
 <br />
@@ -329,11 +340,8 @@ On a new Profile...
 * *Panel height:* -> Set to **30**
   * **Application Launcher**
     * *Show Alternatives...* -> Select **Application Dashboard** instead of the Launcher
-  * **Trash**
-  * **Show Desktop**
   * **Pager**
-  * **Launcher** -> Dolphin File Manager
-  * **Launcher** -> Firefox ESR
+  * **Trash**
   * *SPACE*
   * **System Tray**
     * *Entries* -> set `IBus Panel` Visibility  to **Always hidden**
