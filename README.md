@@ -283,9 +283,10 @@ Following are my personal settings for the DE in KDE.
   * *Shortcuts | KWin* -> `Minimize Window` **Uncheck** Default shortcut and add **Meta+Down**
   * *Shortcuts | KWin* -> `Switch One Desktop Down` **Check** Default shortcut **Meta+Ctrl+Down**
   * *Shortcuts | KWin* -> `Switch One Desktop Up` **Check** Default shortcut **Meta+Ctrl+Up**
+  * *Shortcuts | Plasma* -> `Activate Application Dashboard Widget` Add custom shortcut **Meta+Space**
 * **Startup and Shutdown**
   * *Login Screen (SDDM)* -> *We will be selecting a new theme*
-  * *Splash Screen* -> Install and select **QuarksSplashDark**
+  * *Splash Screen* -> Install and select **Yaplass - Debian** because of course
 
 - [X] **Hardware**
 * **Input Devices**
@@ -321,6 +322,7 @@ On a new Profile...
 - [x] **Panel**
 * *Panel height:* -> Set to **30**
   * **Application Launcher**
+    * *Show Alternatives...* -> Select **Application Dashboard** instead of the Launcher
   * **Trash**
   * **Show Desktop**
   * **Pager**
