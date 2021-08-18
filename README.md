@@ -130,7 +130,6 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 :# apt update
 :# apt install qt5-style-kvantum qt5-style-kvantum-themes
 ```
-* Since the PPA splits the package into qt5-style-kvantum and qt5-style-kvantum-themes, both of them should be installed.
 * Now we need to go to *System Settings -> Application Style* and select **kvantum-dark** to activate it in Plasma.
 
 <br />
@@ -287,6 +286,11 @@ Following are my personal settings for the DE in KDE.
 * **Startup and Shutdown**
   * *Login Screen (SDDM)* -> *We will be selecting a new theme*
   * *Splash Screen* -> Install and select **Yaplass - Debian** because of course
+
+- [X] **Personalization**
+* **Applications**
+  * *Default Applications* -> for Web Browser: select **Firefox ESR**
+  * *Launch Feedback* -> for Cursor: select **No Feedback**
 
 - [X] **Hardware**
 * **Input Devices**
