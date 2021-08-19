@@ -164,14 +164,15 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 ```
 * You can now install Atom using `apt`:
 ```
-# Install Atom
+~ INSTALL ATOM ~
 :# apt install atom
 ```
 * Alternatively, you can download the Atom .deb package and install it directly:
 ```
-# Install Atom
+~ INSTALL ATOM ~
 :# dpkg -i atom-amd64.deb
-# Install Atom's dependencies if they are missing
+
+~ INSTALL ATOM'S DEPENDENCIES IF THEY ARE MISSING ~
 :# apt -f install
 ```
 * Some packages to consider installing would be:
