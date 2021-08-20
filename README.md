@@ -342,15 +342,15 @@ On a new Profile...
 * *Panel height:* -> Set to **30**
   * **Application Launcher**
     * *Show Alternatives...* -> Select **Application Dashboard** instead of the Launcher
-  * **Pager**
-  * **Trash**
   * *SPACE*
   * **System Tray**
     * *Entries* -> set `IBus Panel` Visibility  to **Always hidden**
     * *Entries* -> set `Battery and Brightness` Visibility to **Shown when relevant**
+    * *Entries* -> set `Clipboard` Visibility to **Always hidden** (This because it basically saves everything you type!)
   * **Digital Clock**
     * *Appearance* -> **Uncheck** ` Show date
     * *Appearance* -> set `Time display:` to **24-Hour**
+  * **Trash**
 
 <br />
 :octocat:
