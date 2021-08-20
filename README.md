@@ -93,7 +93,7 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 :# apt install gparted
 ```
 
-- [x] ~~**GIT**~~ *Already installed*
+- [x] ~~**GIT**~~ *Comes with the Debian 11 KDE install*
 ```
 :# apt install git
 ```
@@ -103,7 +103,7 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 :# apt install vlc
 ```
 
-- [x] ~~**Firefox**~~ *Already installed*
+- [x] ~~**Firefox**~~ *Comes with the Debian 11 KDE install*
 ```
 :# apt install firefox
 ```
@@ -282,6 +282,7 @@ Following are my personal settings for the DE in KDE.
 - [X] **Workspace**
 * **Workspace Behavior**
   * *General Behaviour* -> Click behavior: Select **Double-click to open files and folders**
+  * *Screen Locking* -> Lock screen automatically: After **15 minutes**
   * *Screen Locking* -> Click Appearance: **Configure...** to select your Wallpaper
   * *Virtual Desktops* -> Add 2 Rows, **TOP** and **BOTTOM**
   * *Activities | Activities* -> Add new activity called **Work**
