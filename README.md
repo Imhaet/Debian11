@@ -138,7 +138,8 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
   * Install **Sweet KDE** Global Theme.
   * Install **Sweet KDE** Plasma Style.
   * Install **Sweet Aurorae** Window Decorations.
-  * Install **Sweet cursors** if the Cursors hasn't been installed.
+  * Install **Sweet cursors** if the Cursors hasn't been installed
+  * Install **Sweet SDDM** Login Screen
 * Download **Sweet-Rainbow** and **Sweet-Purple** folder icons from the [KDE Store](https://store.kde.org/), unpack them and move them to `~/.local/share/icons`
 * Now just have to apply all the settings and don't forget to **Log Out** and back in to see all changes!
 
@@ -297,7 +298,7 @@ Following are my personal settings for the DE in KDE.
   * *Shortcuts | KWin* -> `Switch One Desktop Up` **Check** Default shortcut **Meta+Ctrl+Up**
   * *Shortcuts | Plasma* -> `Activate Application Dashboard Widget` Add custom shortcut **Meta+Space**
 * **Startup and Shutdown**
-  * *Login Screen (SDDM)* -> *We will be selecting a new theme*
+  * *Login Screen (SDDM)* -> Sellect the **Sweet SDDM** if it hasn't been selected, and change the background image
   * *Splash Screen* -> Install and select **Sweet**
 
 - [X] **Personalization**
