@@ -1,6 +1,7 @@
 ## FIRST THING FIRST
 
-This installation list is based on my preferences while trying out Debian 11 (Bullseye) :dart: with KDE Plasma 5.20 on my - quite old - macbook and is not a definitive procedure. Feel free to use at your own peril.
+This installation list is based on my preferences while trying out Debian 11 (Bullseye) :dart: with KDE Plasma 5.20 on my - quite old - macbook and is not a definitive procedure, but it was easier out of the box than the previous Debian10 XFCE installation.
+Feel free to use this guide at your own peril.
 
 <br />
 
