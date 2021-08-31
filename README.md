@@ -311,7 +311,7 @@ Following are my personal settings for the DE in KDE.
   * *Touchpad | Tapping:* -> **Check** Tap-to-click
   * *Touchpad | Scrolling:* -> **Check** Invert scroll direction (Natural scrolling)
 * **Display and Monitor**
-  * *Compositor* -> for Rendering backend: select **OpenGL3.1**
+  * *Compositor* -> for Rendering backend: select **OpenGL3.1** **XRender**
 * **Power Management**
   * *Energy Saving | On AC Power* -> `Dim screen` after **10 min**
   * *Energy Saving | On AC Power* -> `Screen Energy Saving` After **30 min**
@@ -329,9 +329,8 @@ Following are my personal settings for the DE in KDE.
 * *Panel height:* -> Set to **30**
   * **Application Launcher**
     * *Show Alternatives...* -> Select **Application Dashboard** instead of the Launcher
-  * *SPACE*
+  * **Icons-only Task Manager**
   * **System Tray**
-    * *Entries* -> set `IBus Panel` Visibility  to **Always hidden**
     * *Entries* -> set `Battery and Brightness` Visibility to **Always shown**
     * *Entries* -> set `Clipboard` Visibility to **Always hidden** (This because it basically saves everything you type!)
   * **Digital Clock**
