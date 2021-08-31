@@ -57,7 +57,7 @@ deb-src http://security.debian.org/debian-security/ bullseye/updates main
 * Install the appropriate firmware installer package:
 For devices with a BCM4306 revision 3, BCM4311, BCM4318, BCM4321 or BCM4322 chip, install firmware-b43-installer:
 ```
-:# apt install firmware-b43-installer -y
+:# apt install firmware-b43-installer
 ```
 * Reboot.
 
@@ -318,6 +318,55 @@ Following are my personal settings for the DE in KDE.
   * *Energy Saving | On Battery* -> `Dim screen` after **2 min**
   * *Energy Saving | On Battery* -> `Screen Energy Saving` Switch off after **5 min**
   * *Energy Saving | On Battery* -> `Suspend session` Automatically **Sleep** after **10 min**
+* **Bluetooth**
+  * **Disable Bluetooth** since I'm not using it at the moment
+
+<br />
+
+### Panel Preferences
+
+- [x] **Panel**
+* *Panel height:* -> Set to **30**
+  * **Application Launcher**
+    * *Show Alternatives...* -> Select **Application Dashboard** instead of the Launcher
+  * *SPACE*
+  * **System Tray**
+    * *Entries* -> set `IBus Panel` Visibility  to **Always hidden**
+    * *Entries* -> set `Battery and Brightness` Visibility to **Always shown**
+    * *Entries* -> set `Clipboard` Visibility to **Always hidden** (This because it basically saves everything you type!)
+  * **Digital Clock**
+    * *Appearance* -> **Uncheck** ` Show date
+    * *Appearance* -> set `Time display:` to **24-Hour**
+
+<br />
+
+### Dolphin Preferences
+
+- [x] **Left Panel**
+* *Places* -> Hide Section **Devices**
+
+- [x] **Menubar**
+* *View* -> **Uncheck** Show Previews (On the main window, you can resize the folder icons back to 64px)
+* *View | Show Panels* -> **Uncheck** show Places
+
+- [x] **Toolbar Settings**
+* **Uncheck** Lock Toolbar Positions
+* *Text Position* -> Icons Only
+* *Orientation* -> Left
+* *Configure Toolbars...*
+  * **Current actions**
+    * *Back*
+    * *Forward*
+    * *--- separator ---*
+    * *Home*
+    * *Icons*
+    * *Compact*
+    * *Details*
+    * *Places*
+    * *Show Previews*
+    * *Information*
+    * *Terminal*
+    * *Split*
 
 <br />
 
@@ -334,24 +383,6 @@ On a new Profile...
 * *Appearance* -> Select **Linux Colors**
 * *Appearance | Edit...* -> Set **Background transparency:** to **30%**
 * Select the New profile **Set as Default**
-
-<br />
-
-### Panel Preferences
-
-- [x] **Panel**
-* *Panel height:* -> Set to **30**
-  * **Application Launcher**
-    * *Show Alternatives...* -> Select **Application Dashboard** instead of the Launcher
-  * *SPACE*
-  * **System Tray**
-    * *Entries* -> set `IBus Panel` Visibility  to **Always hidden**
-    * *Entries* -> set `Battery and Brightness` Visibility to **Shown when relevant**
-    * *Entries* -> set `Clipboard` Visibility to **Always hidden** (This because it basically saves everything you type!)
-  * **Digital Clock**
-    * *Appearance* -> **Uncheck** ` Show date
-    * *Appearance* -> set `Time display:` to **24-Hour**
-  * **Trash**
 
 <br />
 :octocat:
