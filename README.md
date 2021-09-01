@@ -331,6 +331,7 @@ Following are my personal settings for the DE in KDE.
     * *Show Alternatives...* -> Select **Application Dashboard** instead of the Launcher
   * **Icons-only Task Manager**
   * **System Tray**
+    * *Entries* -> set `IBus Panel` Visibility to **Always hidden**
     * *Entries* -> set `Battery and Brightness` Visibility to **Always shown**
     * *Entries* -> set `Clipboard` Visibility to **Always hidden** (This because it basically saves everything you type!)
   * **Digital Clock**
