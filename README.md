@@ -121,7 +121,7 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 
 ## COSMETICS
 
-*Note:* I liked the look of the `Sweet KDE` theme from lkjkjl so, that is the one I am installing here, but you can follow the same procedure for any other Kvantum powered theme for KDE.
+*Note:* It looks like my Nvidia card is having problems with themes that require a lot of GPU. Every now and then Plasma just freezes (the mouse moves, but can't do anything else) and the only way I've been able to fix it is by rebooting. Therefore I've decided not to use Kvantum anymore. I'll leave the process here in case you want to try it though.
 
 <br />
 
@@ -133,14 +133,8 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 :# apt install qt5-style-kvantum qt5-style-kvantum-themes
 ```
 * Now we need to go to *System Settings -> Application Style* and select **kvantum** to activate it in Plasma.
-* Open **Kvantum Manager** to select an install the unpacked Kvantum **Sweet-transparent** Kvantum theme and **Select** it.
-* Open **System Settings** and:
-  * Install **Sweet KDE** Global Theme.
-  * Install **Sweet KDE** Plasma Style.
-  * Install **Sweet Aurorae** Window Decorations.
-  * Install **Sweet cursors** if the Cursors hasn't been installed
-  * Install **Sweet SDDM** Login Screen
-* Download **Sweet-Rainbow** and **Sweet-Purple** folder icons from the [KDE Store](https://store.kde.org/), unpack them and move them to `~/.local/share/icons`
+* Open **Kvantum Manager** to select an install the unpacked Kvantum theme desired.
+* Open **System Settings** and install the rest of the theme package.
 * Now just have to apply all the settings and don't forget to **Log Out** and back in to see all changes!
 
 <br />
@@ -273,7 +267,7 @@ Following are my personal settings for the DE in KDE.
 <br />
 
 - [X] **Appearance**
-* *Global Theme* -> Select **Sweet** for the Theme
+* *Global Theme* -> Select **Breeze Dark** for the Theme
 * *Plasma Style* -> Select **Sweet** for the Style
 * *Application Style* -> Select **Kvantum**
 * *Colors* -> Select **Sweet** for the Colors
@@ -298,7 +292,7 @@ Following are my personal settings for the DE in KDE.
   * *Shortcuts | KWin* -> `Switch One Desktop Up` **Check** Default shortcut **Meta+Ctrl+Up**
   * *Shortcuts | Plasma* -> `Activate Application Dashboard Widget` Add custom shortcut **Meta+Space**
 * **Startup and Shutdown**
-  * *Login Screen (SDDM)* -> Sellect the **Sweet SDDM** if it hasn't been selected, and change the background image
+  * *Login Screen (SDDM)* -> Sellect the **Chilli** if it hasn't been selected, and change the background image
   * *Splash Screen* -> Install and select **Sweet**
 
 - [X] **Personalization**
