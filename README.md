@@ -268,11 +268,11 @@ Following are my personal settings for the DE in KDE.
 
 - [X] **Appearance**
 * *Global Theme* -> Select **Breeze Dark** for the Theme
-* *Plasma Style* -> Select **Sweet** for the Style
-* *Application Style* -> Select **Kvantum**
-* *Colors* -> Select **Sweet** for the Colors
-* *Icons* -> Select **Sweet-Purple** for the Icons
-* *Cursors* -> Select **Sweet-cursors** for the Cursors
+* *Plasma Style* -> Select **Layan plasma theme** for the Style
+* *Application Style | Window Decorations* -> Remove the **Context help** from the Titlebar
+* *Colors* -> Select **Breeze Dark** for the Colors
+* *Icons* -> Select **Papirus-Dark** for the Icons
+* *Cursors* -> Select **Vimix-cursors** for the Cursors
 
 - [X] **Workspace**
 * **Workspace Behavior**
@@ -292,8 +292,8 @@ Following are my personal settings for the DE in KDE.
   * *Shortcuts | KWin* -> `Switch One Desktop Up` **Check** Default shortcut **Meta+Ctrl+Up**
   * *Shortcuts | Plasma* -> `Activate Application Dashboard Widget` Add custom shortcut **Meta+Space**
 * **Startup and Shutdown**
-  * *Login Screen (SDDM)* -> Sellect the **Chilli** if it hasn't been selected, and change the background image
-  * *Splash Screen* -> Install and select **Sweet**
+  * *Login Screen (SDDM)* -> Sellect the **Chili for Plasma** if it hasn't been selected, and change the background image
+  * *Splash Screen* -> Install and select **YAPLASS Debian** because of course
 
 - [X] **Personalization**
 * **Applications**
@@ -375,7 +375,7 @@ On a new Profile...
 * *General* -> Give this profile a **New Name**
 * *General* -> Set the **Initial terminal size:** to **120 columns** and **40 rows**
 * *Appearance* -> Select **Linux Colors**
-* *Appearance | Edit...* -> Set **Background transparency:** to **30%**
+* *Appearance | Edit...* -> Set **Background transparency:** to **60%**
 * Select the New profile **Set as Default**
 
 <br />
