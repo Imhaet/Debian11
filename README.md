@@ -121,7 +121,7 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 
 ## COSMETICS
 
-*Note:* It looks like my Nvidia card is having problems with themes that require a lot of GPU. Every now and then Plasma just freezes (the mouse moves, but can't do anything else) and the only way I've been able to fix it is by rebooting. Therefore I've decided not to use Kvantum anymore. I'll leave the process here in case you want to try it though.
+*Note:* It looks like my Nvidia card is having problems with themes that require a lot of GPU. Every now and then Plasma just freezes (the mouse moves, but can't do anything else) and the only way I've been able to fix it is by rebooting. Therefore I've decided not to use Kvantum anymore. I'll leave the installation process here in case you want to try it though.
 
 <br />
 
@@ -375,7 +375,7 @@ On a new Profile...
 * *General* -> Give this profile a **New Name**
 * *General* -> Set the **Initial terminal size:** to **120 columns** and **40 rows**
 * *Appearance* -> Select **Linux Colors**
-* *Appearance | Edit...* -> Set **Background transparency:** to **60%**
+* *Appearance | Edit...* -> Set **Background transparency:** to **30%**
 * Select the New profile **Set as Default**
 
 <br />
