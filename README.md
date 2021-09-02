@@ -305,7 +305,7 @@ Following are my personal settings for the DE in KDE.
   * *Touchpad | Tapping:* -> **Check** Tap-to-click
   * *Touchpad | Scrolling:* -> **Check** Invert scroll direction (Natural scrolling)
 * **Display and Monitor**
-  * *Compositor* -> for Rendering backend: select **OpenGL3.1** **XRender**
+  * *Compositor* -> for Rendering backend: select **XRender** for the Nvidia card
 * **Power Management**
   * *Energy Saving | On AC Power* -> `Dim screen` after **10 min**
   * *Energy Saving | On AC Power* -> `Screen Energy Saving` After **30 min**
