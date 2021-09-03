@@ -88,7 +88,7 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 
 ### Installing Apps
 
-- [x] **GParted** 
+- [x] ~~**GParted**~~ *KDE comes with the KDE Partition Manager*
 ```
 :# apt install gparted
 ```
