@@ -245,8 +245,8 @@ MimeType=text/plain
 - [x] **Clean Up OS**
 * After uninstalling, make sure there are no dependencies left by running the following commands:
 ```
-:# apt autoremove -y
-:# apt autoclean -y
+:# apt autoremove
+:# apt autoclean
 ```
 
 <br />
