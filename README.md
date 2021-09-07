@@ -63,6 +63,21 @@ For devices with a BCM4306 revision 3, BCM4311, BCM4318, BCM4321 or BCM4322 chip
 
 More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) apple wifi webpage.
 
+<br />
+
+- [x] **Enable Tapping and Reverse Scrolling (Natural) on Touchpad**
+* Worked out of the box! :smile:
+
+<br />
+
+- [x] **Sound (For MacBook Aluminum - late 2008)** :speaker:
+* Worked out of the box! :smile:
+
+<br />
+
+- [x] **Suspend/Sleep** :zzz:
+* It appears that without using NVIDIA drivers, Suspend/Sleep won't work (the machine will not resume/wake-up and the only solution is to force reboot). Since I will not install the NVIDIA drivers because they are more trouble than is worth (I mean, I'm not using this machine for gaming right?). So I'll just desable it.
+
 ---
 
 <br />
@@ -309,9 +324,15 @@ Following are my personal settings for the DE in KDE.
 * **Power Management**
   * *Energy Saving | On AC Power* -> `Dim screen` after **10 min**
   * *Energy Saving | On AC Power* -> `Screen Energy Saving` After **30 min**
+  * *Energy Saving | On AC Power* -> `Button events handling` `When laptop lid is closed` **Turn off screen**
   * *Energy Saving | On Battery* -> `Dim screen` after **2 min**
   * *Energy Saving | On Battery* -> `Screen Energy Saving` Switch off after **5 min**
-  * *Energy Saving | On Battery* -> `Suspend session` Automatically **Sleep** after **10 min**
+  * *Energy Saving | On Battery* -> `Suspend session` Automatically **Shut down** after **15 min**
+  * *Energy Saving | On Battery* -> `Button events handling` `When laptop lid is closed` **Shut down**
+  * *Energy Saving | On Low Battery* -> `Dim screen` after **1 min**
+  * *Energy Saving | On Low Battery* -> `Screen Energy Saving` Switch off after **2 min**
+  * *Energy Saving | On Low Battery* -> `Suspend session` Automatically **Shut down** after **5 min**
+  * *Energy Saving | On Low Battery* -> `Button events handling` `When laptop lid is closed` **Shut down**
 * **Bluetooth**
   * **Disable Bluetooth** since I'm not using it at the moment
 
