@@ -307,7 +307,8 @@ Following are my personal settings for the DE in KDE.
   * *Shortcuts | KWin* -> `Switch One Desktop Up` **Check** Default shortcut **Meta+Ctrl+Up**
   * *Shortcuts | Plasma* -> `Activate Application Dashboard Widget` Add custom shortcut **Meta+Space**
 * **Startup and Shutdown**
-  * *Login Screen (SDDM)* -> Sellect the **Chili for Plasma** if it hasn't been selected, and change the background image
+  * *Login Screen (SDDM)* -> Select the **Chili for Plasma** if it hasn't been selected, and change the background image
+  * *Desktop Session* -> `On Login` section: Select the **Start with an empty session**
   * *Splash Screen* -> Install and select **YAPLASS Debian** because of course
 
 - [X] **Personalization**
