@@ -140,7 +140,7 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 
 <br />
 
-- [x] **Kvantum Theme Engine**
+- [x] ~~**Kvantum Theme Engine**~~
 * Some KVE themes have been developed with a Qt engine called [Kvantum](https://github.com/tsujan/Kvantum), and can be direclty installed on Debian-based distributions with:
 ```
 :# add-apt-repository ppa:papirus/papirus
