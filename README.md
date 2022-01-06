@@ -390,6 +390,7 @@ Following are my personal settings for the DE in KDE.
 
 - [x] **General**
 * *Process and window:* -> **Uncheck** Show menubar
+* *Process and window:* -> **Uncheck** Remember window size
 * *Process and window:* -> **Check** Remove window titlebar and frame
 
 - [x] **Profiles**
