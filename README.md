@@ -49,7 +49,7 @@ deb-src http://deb.debian.org/debian bullseye-updates main contrib non-free
 deb http://security.debian.org/debian-security/ bullseye/updates main
 deb-src http://security.debian.org/debian-security/ bullseye/updates main
 ```
-* *Note:* Do not add a new line. Just add "contrib non-free" to the end of your existing line.
+*Note:* Do not add a new line. Just add "contrib non-free" to the end of your existing line.
 * Update the list of available packages:
 ```
 :# apt update
@@ -66,17 +66,20 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 <br />
 
 - [x] **Enable Tapping and Reverse Scrolling (Natural) on Touchpad**
-* Worked out of the box! :smile:
+
+Worked out of the box! :smile:
 
 <br />
 
 - [x] **Sound (For MacBook Aluminum - late 2008)** :speaker:
-* Worked out of the box! :smile:
+
+Worked out of the box! :smile:
 
 <br />
 
 - [x] **Suspend/Sleep** :zzz:
-* It appears that without using NVIDIA drivers, Suspend/Sleep won't work (the machine will not resume/wake-up and the only solution is to force reboot). Since I will not install the NVIDIA drivers because they are more trouble than is worth (I mean, I'm not using this machine for gaming right?). So I'll just desable it.
+
+It appears that without using NVIDIA drivers, Suspend/Sleep won't work (the machine will not resume/wake-up and the only solution is to force reboot). Since I will not install the NVIDIA drivers because they are more trouble than is worth (I mean, I'm not using this machine for gaming right?). So I'll just desable it.
 
 ---
 
@@ -166,24 +169,33 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 <br />
 
 - [x] **Atom** :link: [atom.io](https://atom.io)
-* To install Atom on Debian, Ubuntu, or related distributions, add our official package repository to your system by running the following commands:
+
+To install Atom on Debian now that apt-key is deprecated, and have to manage keyring files in tusted.gpg.d instead, the following intructions are a bit different than the ones on Atom's webpage.
+
+* First create a new directory to store local keys, it is important to separate them from the keys trusted by apt (ie. /etc/apt/trusted.gpg.d).
 ```
-:$ wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
-:# sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+:# mkdir /etc/apt/local.trusted.gpg.d
+```
+* Download current key in base64 format (ascii-armored).
+```
+:# wget -qO /etc/apt/local.trusted.gpg.d/atom-archive-keyring.asc https://packagecloud.io/AtomEditor/atom/gpgkey
+```
+* Export the armored key to a binary gpg file format.
+```
+:# cat /etc/apt/local.trusted.gpg.d/atom-archive-keyring.asc | sudo gpg --dearmor --output /etc/apt/local.trusted.gpg.d/atom-archive-keyring.asc
+```
+* Add the credentials to the sources.list; this is similar as the previous instructions, except for the new option signed-by which references the key.
+```
+:# sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/local.trusted.gpg.d/atom-archive-keyring.gpg] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+```
+* Run `apt update` for the changes to take effect
+```
 :# apt update
 ```
 * You can now install Atom using `apt`:
 ```
 ~ INSTALL ATOM ~
 :# apt install atom
-```
-* Alternatively, you can download the Atom .deb package and install it directly:
-```
-~ INSTALL ATOM ~
-:# dpkg -i atom-amd64.deb
-
-~ INSTALL ATOM'S DEPENDENCIES IF THEY ARE MISSING ~
-:# apt -f install
 ```
 * Some packages to consider installing would be:
   - [atom-updater-linux by andyrichardson](https://atom.io/packages/atom-updater-linux) - Checks automatically for updates when opening Atom.
