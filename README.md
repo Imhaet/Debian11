@@ -188,7 +188,7 @@ To install Atom on Debian now that apt-key is deprecated, and have to manage key
 ```
 :# sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/local.trusted.gpg.d/atom-archive-keyring.gpg] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
 ```
-* Run `apt update` for the changes to take effect
+* Run `apt update` for the changes to take effect.
 ```
 :# apt update
 ```
