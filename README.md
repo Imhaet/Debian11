@@ -172,27 +172,27 @@ It appears that without using NVIDIA drivers, Suspend/Sleep won't work (the mach
 
 To install Atom on Debian now that apt-key is deprecated, and have to manage keyring files in tusted.gpg.d instead, the following intructions are a bit different than the ones on Atom's webpage.
 
-* First create a new directory to store local keys, it is important to separate them from the keys trusted by apt (ie. /etc/apt/trusted.gpg.d).
+* First create a new directory to store local keys, it is important to separate them from the keys trusted by apt (ie. /etc/apt/trusted.gpg.d):
 ```
 :# mkdir /etc/apt/local.trusted.gpg.d
 ```
-* Download current key in base64 format (ascii-armored).
+* Download current key in base64 format (ascii-armored):
 ```
 :# wget -qO /etc/apt/local.trusted.gpg.d/atom-archive-keyring.asc https://packagecloud.io/AtomEditor/atom/gpgkey
 ```
-* Export the armored key to a binary gpg file format.
+* Export the armored key to a binary gpg file format:
 ```
-:# cat /etc/apt/local.trusted.gpg.d/atom-archive-keyring.asc | sudo gpg --dearmor --output /etc/apt/local.trusted.gpg.d/atom-archive-keyring.asc
+:$ cat /etc/apt/local.trusted.gpg.d/atom-archive-keyring.asc | sudo gpg --dearmor --output /etc/apt/local.trusted.gpg.d/atom-archive-keyring.asc
 ```
-* Add the credentials to the sources.list; this is similar as the previous instructions, except for the new option signed-by which references the key.
+* Add the credentials to the sources.list; this is similar as the previous instructions, except for the new option signed-by which references the key:
 ```
 :# sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/local.trusted.gpg.d/atom-archive-keyring.gpg] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
 ```
-* Run `apt update` for the changes to take effect.
+* Run `apt update` for the changes to take effect:
 ```
 :# apt update
 ```
-* You can now install Atom using `apt`:
+* You can now install Atom:
 ```
 ~ INSTALL ATOM ~
 :# apt install atom
@@ -296,6 +296,7 @@ Following are my personal settings for the DE in KDE.
 - [X] **Appearance**
 * *Global Theme* -> Select **Breeze Dark** for the Theme
 * *Plasma Style* -> Select **Layan plasma theme** for the Style
+* *Application Style* -> Select **Breeze** for the Style
 * *Application Style | Window Decorations* -> Remove the **Context help** from the Titlebar
 * *Colors* -> Select **Breeze Dark** for the Colors
 * *Icons* -> Select **Papirus-Dark** for the Icons
@@ -306,7 +307,7 @@ Following are my personal settings for the DE in KDE.
   * *General Behaviour* -> Click behavior: Select **Double-click to open files and folders**
   * *Screen Locking* -> Lock screen automatically: After **15 minutes**
   * *Screen Locking* -> Click Appearance: **Configure...** to select your Wallpaper
-  * *Virtual Desktops* -> Add 2 Rows, **TOP** and **BOTTOM**
+  * *Virtual Desktops* -> Add 2 Rows, **TOP** and **DOWN**
   * *Activities | Activities* -> Add new activity called **Work**
   * *Activities | Switching* -> `Walk through activities` set the **Global Alternate** shortcut to **Meta+Ctrl+Right**
   * *Activities | Switching* -> `Walk through activities (Reverse)` set the **Global Alternate** shortcut to **Meta+Ctrl+Left**
@@ -317,7 +318,6 @@ Following are my personal settings for the DE in KDE.
   * *Shortcuts | KWin* -> `Minimize Window` **Uncheck** Default shortcut and add **Meta+Down**
   * *Shortcuts | KWin* -> `Switch One Desktop Down` **Check** Default shortcut **Meta+Ctrl+Down**
   * *Shortcuts | KWin* -> `Switch One Desktop Up` **Check** Default shortcut **Meta+Ctrl+Up**
-  * *Shortcuts | Plasma* -> `Activate Application Dashboard Widget` Add custom shortcut **Meta+Space**
 * **Startup and Shutdown**
   * *Login Screen (SDDM)* -> Select the **Chili for Plasma** if it hasn't been selected, and change the background image
   * *Desktop Session* -> `On Login` section: Select the **Start with an empty session**
@@ -355,9 +355,12 @@ Following are my personal settings for the DE in KDE.
 
 - [x] **Panel**
 * *Panel height:* -> Set to **30**
+* **Icons-only Task Manager**
   * **Application Launcher**
     * *Show Alternatives...* -> Select **Application Dashboard** instead of the Launcher
-  * **Icons-only Task Manager**
+    * *Configure Application Dashboard... -> On `Keyboard Shortcuts` add custom shortcut **Meta+Space**
+  * *Leave **Pager Widget** as is*
+  * *No launch icons*
   * **System Tray**
     * *Entries* -> set `IBus Panel` Visibility to **Always hidden**
     * *Entries* -> set `Battery and Brightness` Visibility to **Always shown**
@@ -392,9 +395,10 @@ Following are my personal settings for the DE in KDE.
     * *Details*
     * *Places*
     * *Show Previews*
-    * *Information*
-    * *Terminal*
     * *Split*
+    * *Information*
+    * *Search*
+    * *Terminal*
 
 <br />
 
@@ -407,7 +411,7 @@ Following are my personal settings for the DE in KDE.
 
 - [x] **Profiles**
 On a new Profile...
-* *General* -> Give this profile a **New Name**
+* *General* -> Give this profile a *New Name*
 * *General* -> Set the **Initial terminal size:** to **120 columns** and **40 rows**
 * *Appearance* -> Select **Linux Colors**
 * *Appearance | Edit...* -> Set **Background transparency:** to **30%**
