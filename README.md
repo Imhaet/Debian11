@@ -214,7 +214,7 @@ To install Atom on Debian now that apt-key is deprecated, and have to manage key
 * For the Syntax highlighting and snippets, get [`language-latex` by area](https://atom.io/packages/language-latex).
 * To autocomplete citations, environments and references, the best package I've found is [`latexer` by Focus](https://atom.io/packages/latexer).
 * To show a document tree view for LaTeX, use [`latex-tree` by raphael-cch](https://atom.io/packages/latex-tree). Then go *Packages -> Latex Tree -> Toggle Tree View* to activate.
-* To spell check your LaTeX file, use the Core Package `spell-check`. Just add `text.tex.latex` into the *Grammar Settings*.
+* To spell check your LaTeX file, use the Core Package `spell-check`. Just add `text.tex.latex` into the *Settings -> Grammars*.
 * ~~For LaTeX function autocompletion, [`latex-autocomplete`](https://atom.io/packages/latex-autocomplete).~~
 * ~~Apparently the only LaTeX sensitive wordcount package is Aerijo's [`latex-wordcount`](https://atom.io/packages/latex-wordcount). It's still incomplete, but it does provide a couple of counting techniques.~~
 * ~~For an undistracted writing experience check out the [Typewriter](https://atom.io/themes/pen-paper-coffee-syntax) theme.~~
