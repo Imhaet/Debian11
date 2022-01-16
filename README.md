@@ -232,6 +232,16 @@ To install Atom on Debian now that apt-key is deprecated, and have to manage key
 * ~~Apparently the only LaTeX sensitive wordcount package is Aerijo's [`latex-wordcount`](https://atom.io/packages/latex-wordcount). It's still incomplete, but it does provide a couple of counting techniques.~~
 * ~~For an undistracted writing experience check out the [Typewriter](https://atom.io/themes/pen-paper-coffee-syntax) theme.~~
 
+- [x] **Atom NOT connecting to GitHub**
+* I am having an error when trying to clone or fetch data from GitHub, the error reads as ''
+* The workarround that has somehow worked is as follows
+  1. /usr/share/atom/resources/app.asar.unpacked/node_modules/dugite/git/bin/
+  2. Rename git: :# mv git git.old
+  3. Create a symbolic link to the regular git with `:# ln -s /usr/bit/git git`. If you `ls -l` you will see the new symbolic link as `git -> /usr/bin/git`.
+  4. Do the same for .../dugite/git/libexec/git-core/
+  5. Clone your repository using the terminal `:$ git clone <url>`
+  6. In Atom, open the folder of your code and check everything works.
+
 <br />
 
 - [x] **Jupyter Notebook** :link: [jupyter](https://jupyter.readthedocs.io/en/latest/index.html)
