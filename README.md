@@ -115,6 +115,11 @@ It appears that without using NVIDIA drivers, Suspend/Sleep won't work (the mach
 ```
 :# apt install git
 ```
+* Configure git with:
+```
+:$ git config --global user.name "John Doe"
+:$ git config --global user.email johndoe@example.com
+```
 
 - [x] **VLC**
 ```
@@ -201,7 +206,8 @@ To install Atom on Debian now that apt-key is deprecated, and have to manage key
   - [atom-updater-linux by andyrichardson](https://atom.io/packages/atom-updater-linux) - Checks automatically for updates when opening Atom.
   - [minimap by atom-minimap](https://atom.io/packages/minimap) - Displays a preview of the full source code.
   - [atom-beautify by Glavin001](https://atom.io/packages/atom-beautify) - To properly format your code.
-  - [git-plus by Akonwi](https://atom.io/packages/git-plus) - Do git things without the terminal.
+  - [terminal-plus by jeremyramin](https://atom.io/packages/terminal-plus) - To have a terminal inside Atom (I don't seem to be able to make it work).
+  - ~~[git-plus by Akonwi](https://atom.io/packages/git-plus) - Do git things without the terminal.~~
   - ~~[linter](https://atom.io/packages/linter) - Checks and cleans your code. Consider looking specific Linter packages for your language.~~
   - ~~[Todo](https://atom.io/packages/todo) - An in *ToDo* list inside Atom.~~
   - ~~[File Icons](https://atom.io/packages/file-icons) - Shows icons of files depending on their type.~~
@@ -267,7 +273,7 @@ MimeType=text/plain
 <br />
 
 - [x] **Uninstall Apps**
-* Uninstall non needed apps using the `sudo apt purge PROGRAM` command.
+* Uninstall non needed apps using the `sudo apt-get purge PROGRAM` command.
 
 - [x] **Clean Up OS**
 * After uninstalling, make sure there are no dependencies left by running the following commands:
