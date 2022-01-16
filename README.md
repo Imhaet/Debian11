@@ -204,11 +204,17 @@ To install Atom on Debian now that apt-key is deprecated, and have to manage key
 ```
 * Some packages to consider installing would be:
   - [atom-updater-linux by andyrichardson](https://atom.io/packages/atom-updater-linux) - Checks automatically for updates when opening Atom.
+  - [script by atom-community](https://atom.io/packages/script) - Run code in Atom!
   - [minimap by atom-minimap](https://atom.io/packages/minimap) - Displays a preview of the full source code.
   - [atom-beautify by Glavin001](https://atom.io/packages/atom-beautify) - To properly format your code.
+  - [autocomplete-python by autocomplete-python]() - To have autocompleate features for Python code.
+  - [python-autopep8]() - For Python pep8 formatting.
+    * Needs to install autopep8 with pip.
+  - [atom-python-virtualenv by pghilardi](https://atom.io/packages/atom-python-virtualenv) - To run our Python scripts with a virtual environment.
   - [terminal-plus by jeremyramin](https://atom.io/packages/terminal-plus) - To have a terminal inside Atom (I don't seem to be able to make it work).
   - ~~[git-plus by Akonwi](https://atom.io/packages/git-plus) - Do git things without the terminal.~~
   - ~~[linter](https://atom.io/packages/linter) - Checks and cleans your code. Consider looking specific Linter packages for your language.~~
+  - [linter-flake8]() - Good linter?
   - ~~[Todo](https://atom.io/packages/todo) - An in *ToDo* list inside Atom.~~
   - ~~[File Icons](https://atom.io/packages/file-icons) - Shows icons of files depending on their type.~~
 
