@@ -233,14 +233,14 @@ To install Atom on Debian now that apt-key is deprecated, and have to manage key
 * ~~For an undistracted writing experience check out the [Typewriter](https://atom.io/themes/pen-paper-coffee-syntax) theme.~~
 
 - [x] **Atom NOT connecting to GitHub**
-* I am having an error when trying to clone or fetch data from GitHub, the error reads as ''
-* The workarround that has somehow worked is as follows
-  1. /usr/share/atom/resources/app.asar.unpacked/node_modules/dugite/git/bin/
-  2. Rename git: :# mv git git.old
+I am having an error when trying to clone or fetch data from GitHub, the error reads as '*git clone --recursive https:... ... fatal: protocol error: bad line length 2*'.
+* The workarround that has somehow worked is as follows, and is based on this [thread](https://github.com/atom/atom/discussions/22668):
+  1. On Debian, Atom's git resources are installed in two places, first go to `/usr/share/atom/resources/app.asar.unpacked/node_modules/dugite/git/bin/`.
+  2. Rename the current's folder git, for example `:# mv git git.old`.
   3. Create a symbolic link to the regular git with `:# ln -s /usr/bit/git git`. If you `ls -l` you will see the new symbolic link as `git -> /usr/bin/git`.
-  4. Do the same for .../dugite/git/libexec/git-core/
+  4. Do the same for `.../git/libexec/git-core/`.
   5. Clone your repository using the terminal `:$ git clone <url>`
-  6. In Atom, open the folder of your code and check everything works.
+  6. In Atom, open the folder with your cloned repository, everything should work now.
 
 <br />
 
