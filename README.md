@@ -323,7 +323,18 @@ Following are my personal settings for the DE in KDE.
 * *Application Style | Window Decorations* -> Remove the **Context help** from the Titlebar
 * *Colors* -> Select **Breeze Dark** for the Colors
 * *Icons* -> Select **Papirus-Dark** for the Icons
-* *Cursors* -> Select **Vimix-cursors** for the Cursors
+  * There is a script to change folder colors automatically:
+  ```
+  wget -qO- https://git.io/papirus-folders-install | sh
+  ```
+  ```
+  # Show the current color and available colors for Papirus-Dark
+  papirus-folders -l --theme Papirus-Dark
+  # Change color of folders to blue-gray for Papyrus-Dark
+  papirus-folders -C bluegray --theme Papirus-Dark
+  # Revert to default color of foldersfor Papirus-dark
+  papirus-folders -D --theme Papirus-Dark
+* *Cursors* -> Select **Vimix-cursors** or **Nordic-cursors** for the Cursors
 
 - [X] **Workspace**
 * **Workspace Behavior**
