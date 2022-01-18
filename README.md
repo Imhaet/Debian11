@@ -132,6 +132,12 @@ It appears that without using NVIDIA drivers, Suspend/Sleep won't work (the mach
 :# apt install firefox
 ```
 
+- [x] **Falkon**
+* Falkon is a Web Browser for KDE that is more light weight than Firefox.
+```
+:# apt install falkon
+```
+
 - [x] **LaTeX**
 * To avoid future problems with extra packages, install the full version of Tex Live. If other package installation problems should appear, this [thread](https://forums.linuxmint.com/viewtopic.php?t=300053) might help.
 ```
@@ -323,17 +329,22 @@ Following are my personal settings for the DE in KDE.
 * *Application Style | Window Decorations* -> Remove the **Context help** from the Titlebar
 * *Colors* -> Select **Breeze Dark** for the Colors
 * *Icons* -> Select **Papirus-Dark** for the Icons
-  * There is a script to change folder colors automatically:
+  * There is a script to change folder colors automatically that can be installed with:
   ```
   wget -qO- https://git.io/papirus-folders-install | sh
   ```
+  * To show the current color and available colors for Papirus-Dark
   ```
-  # Show the current color and available colors for Papirus-Dark
   papirus-folders -l --theme Papirus-Dark
-  # Change color of folders to blue-gray for Papyrus-Dark
-  papirus-folders -C bluegray --theme Papirus-Dark
-  # Revert to default color of foldersfor Papirus-dark
+  ```
+  * To change color of folders to blue-gray for Papyrus-Dark
+  ```
+  papirus-folders -C bluegrey --theme Papirus-Dark
+  ```
+  * Revert to default color of foldersfor Papirus-dark
+  ```
   papirus-folders -D --theme Papirus-Dark
+  ```
 * *Cursors* -> Select **Vimix-cursors** or **Nordic-cursors** for the Cursors
 
 - [X] **Workspace**
@@ -359,7 +370,7 @@ Following are my personal settings for the DE in KDE.
 
 - [X] **Personalization**
 * **Applications**
-  * *Default Applications* -> for Web Browser: select **Firefox ESR**
+  * *Default Applications* -> for Web Browser: select **Falkon**
   * *Launch Feedback* -> for Cursor: select **No Feedback**
 
 - [X] **Hardware**
@@ -440,7 +451,6 @@ Following are my personal settings for the DE in KDE.
 
 - [x] **General**
 * *Process and window:* -> **Uncheck** Show menubar
-* *Process and window:* -> **Uncheck** Remember window size
 * *Process and window:* -> **Check** Remove window titlebar and frame
 
 - [x] **Profiles**
