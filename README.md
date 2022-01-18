@@ -219,6 +219,7 @@ To install Atom on Debian now that apt-key is deprecated, and have to manage key
     * Needs to install autopep8 `pip install autopep8`
   - [autocomplete-python by autocomplete-python](https://atom.io/packages/autocomplete-python) - Python completions for packages, variables, methods, functions, with their arguments. Powered by Kite.
   - [atom-python-virtualenv by pghilardi](https://atom.io/packages/atom-python-virtualenv) - To run our Python scripts with a virtual environment.
+    * Add the sources.
   - [file-icons by file-icons](https://atom.io/packages/file-icons) - Assign file extension icons and colours for improved visual grepping.
 
 <br />
