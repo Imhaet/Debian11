@@ -37,7 +37,7 @@ UEFI Boot with GUID Partition Table
 <br />
 
 - [x] **Install Broadcom Wireless**
-* Add a "contrib" and "non-free" components to your existing repository line in `/etc/apt/sources.list` using nano, vi or other editor. Below is an example of said file in Debian 11.
+* Add a "contrib" and "non-free" components to your existing repository line in `/etc/apt/sources.list` using nano, vi or your favorite editor. Below is an example of said file in Debian 11.
 ```
 # See https://wiki.debian.org/SourcesList for more information.
 deb http://deb.debian.org/debian bullseye main contrib non-free
