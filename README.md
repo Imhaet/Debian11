@@ -184,12 +184,9 @@ It appears that without using NVIDIA drivers, Suspend/Sleep won't work (the mach
 
 To install Atom on Debian now that apt-key is deprecated, and have to manage keyring files in tusted.gpg.d instead, the following intructions are a bit different than the ones on Atom's webpage.
 
-* First create a new directory to store local keys, it is important to separate them from the keys trusted by apt (ie. /etc/apt/trusted.gpg.d):
+* First create a new directory to store local keys, it is important to separate them from the keys trusted by apt (ie. /etc/apt/trusted.gpg.d). Then download current key in base64 format (ascii-armored).
 ```
 :# mkdir /etc/apt/local.trusted.gpg.d
-```
-* Download current key in base64 format (ascii-armored):
-```
 :# wget -qO /etc/apt/local.trusted.gpg.d/atom-archive-keyring.asc https://packagecloud.io/AtomEditor/atom/gpgkey
 ```
 * Export the armored key to a binary gpg file format:
@@ -200,26 +197,23 @@ To install Atom on Debian now that apt-key is deprecated, and have to manage key
 ```
 :# sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/local.trusted.gpg.d/atom-archive-keyring.gpg] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
 ```
-* Run `apt update` for the changes to take effect:
+* Run `apt update` for the changes to take effect, and then install Atom. Make sure you have the correct path (e.g., `$HOME\Github`) for your *Project Home*.
 ```
 :# apt update
-```
-* You can now install Atom:
-```
-~ INSTALL ATOM ~
 :# apt install atom
 ```
 * Some packages to consider installing would be:
-  - [atom-updater-linux by andyrichardson](https://atom.io/packages/atom-updater-linux) - Checks automatically for updates when opening Atom.y  - [script by atom-community](https://atom.io/packages/script) - Run code in Atom!
+  - [atom-updater-linux by andyrichardson](https://atom.io/packages/atom-updater-linux) - Checks automatically for updates when opening Atom.
+  - [script by atom-community](https://atom.io/packages/script) - Run code in Atom!
   - [minimap by atom-minimap](https://atom.io/packages/minimap) - Displays a preview of the full source code.
-  - [linter by steelbrain](https://atom.io/packages/linter) - A Base Linter with Cow Powers
+  - [linter by steelbrain](https://atom.io/packages/linter) - A Base Linter with Cow Powers.
   - [linter-flake8 by AtomLinter](https://atom.io/packages/linter-flake8) - Atom linter plugin for Python, using flake8.
     * Needs to install flake8: `pip install flake8`
   - [python-autopep8 by markbaas](https://atom.io/packages/python-autopep8) - Format python code using autopep8.
     * Needs to install autopep8 `pip install autopep8`
   - [autocomplete-python by autocomplete-python](https://atom.io/packages/autocomplete-python) - Python completions for packages, variables, methods, functions, with their arguments. Powered by Kite.
   - [atom-python-virtualenv by pghilardi](https://atom.io/packages/atom-python-virtualenv) - To run our Python scripts with a virtual environment.
-    * Add the sources.
+    * You have to add the sources every time you create a new virtual environment. For example, add `$HOME\Github\NewProject;` to the *Additional virtualenvs*.
   - [file-icons by file-icons](https://atom.io/packages/file-icons) - Assign file extension icons and colours for improved visual grepping.
 
 <br />
