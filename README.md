@@ -197,7 +197,7 @@ To install Atom on Debian now that apt-key is deprecated, and have to manage key
 ```
 :# sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/local.trusted.gpg.d/atom-archive-keyring.gpg] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
 ```
-* Run `apt update` for the changes to take effect, and then install Atom. Make sure you have the correct path (e.g., `$HOME\Github`) for your *Project Home*.
+* Run `apt update` for the changes to take effect, and then install Atom. Make sure you have the correct path (e.g., `~/Github`) for your *Project Home*.
 ```
 :# apt update
 :# apt install atom
@@ -213,7 +213,7 @@ To install Atom on Debian now that apt-key is deprecated, and have to manage key
     * Needs to install autopep8 `pip install autopep8`
   - [autocomplete-python by autocomplete-python](https://atom.io/packages/autocomplete-python) - Python completions for packages, variables, methods, functions, with their arguments. Powered by Kite.
   - [atom-python-virtualenv by pghilardi](https://atom.io/packages/atom-python-virtualenv) - To run our Python scripts with a virtual environment.
-    * You have to add the sources every time you create a new virtual environment. For example, add `$HOME\Github\NewProject;` to the *Additional virtualenvs*.
+    * You have to add the sources every time you create a new virtual environment. For example, add `~/Github/NewProject;` to the *Additional virtualenvs*.
   - [file-icons by file-icons](https://atom.io/packages/file-icons) - Assign file extension icons and colours for improved visual grepping.
 
 <br />
