@@ -194,7 +194,7 @@ To install Atom on Debian now that apt-key is deprecated, and have to manage key
 ```
 * Export the armored key to a binary gpg file format:
 ```
-:$ cat /etc/apt/local.trusted.gpg.d/atom-archive-keyring.asc | sudo gpg --dearmor --output /etc/apt/local.trusted.gpg.d/atom-archive-keyring.asc
+:$ cat /etc/apt/local.trusted.gpg.d/atom-archive-keyring.asc | sudo gpg --dearmor --output /etc/apt/local.trusted.gpg.d/atom-archive-keyring.gpg
 ```
 * Add the credentials to the sources.list; this is similar as the previous instructions, except for the new option signed-by which references the key:
 ```
