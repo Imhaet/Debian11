@@ -236,7 +236,7 @@ I am having an error when trying to clone or fetch data from GitHub, the error r
   2. Rename the current's folder git, for example `:# mv git git.old`.
   3. Create a symbolic link to the regular git with `:# ln -s /usr/bin/git git`. If you `ls -l` you will see the new symbolic link as `git -> /usr/bin/git`.
   4. Do the same for `.../git/libexec/git-core/`.
-  5. Clone your repository using the terminal `:$ git clone <url>`
+  5. Clone your repository using the terminal `:$ git clone <url>` on your project directory.
   6. In Atom, open the folder with your cloned repository, everything should work now.
 
 <br />
