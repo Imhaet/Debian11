@@ -242,10 +242,11 @@ I am having an error when trying to clone or fetch data from GitHub, the error r
 <br />
 
 - [x] **Jupyter Notebook** :link: [jupyter](https://jupyter.readthedocs.io/en/latest/index.html)
+Before installing Jupyter or any other python package, you may want to consider doing the instalation in a virtual environment. To do this, we first need to install python VE package with `:# apt install python3-venv` (We are using here Python 3). After installation you can then, move to your Python project folders and create a folder called `venv/` (For example `~/Github/TestRepo/venv/`). Now, on `~/Github/TestRepo/` run `source ./venv/bin/activate` and you will notice that the prommt has changed, it now starts with `(vevn) user@machine:~$`. Now you can install any package you want and will be installed for only that Project.
 * First make sure you have [pip](https://jupyter.readthedocs.io/en/latest/glossary.html#term-pip) for Python installed. If not, just run `:# apt install python3-pip` and then run the command `pip3 -V` to verify the installation.
 * Then install the Jupyter Notebook using:
 ```
-pip3 install jupyter
+pip3 install notebook
 ```
 * Congratulations, you have installed Jupyter Notebook. To run the notebook:
 ```
